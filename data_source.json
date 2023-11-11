@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "id": "573829401",
+      "name": "Grand Palace",
+      "status": "RUNNING",
+      "objective": "LINK_CLICK",
+      "special_ad_categories": [],
+      "special_ad_category": "NONE"
+    },
+    {
+      "id": "891204576",
+      "name": "Ayutthaya Historical Park",
+      "status": "SUSPENDED",
+      "objective": "LINK_CLICK",
+      "special_ad_categories": [],
+      "special_ad_category": "NONE"
+    },
+    {
+      "id": "462150937",
+      "name": "Wat Arun",
+      "status": "RUNNING",
+      "objective": "LINK_CLICK",
+      "special_ad_categories": [],
+      "special_ad_category": "NONE"
+    },
+    {
+      "id": "675813249",
+      "name": "Chiang Mai Old City",
+      "status": "RUNNING",
+      "objective": "LINK_CLICK",
+      "special_ad_categories": [],
+      "special_ad_category": "NONE"
+    },
+    {
+      "id": "129384765",
+      "name": "Phang Nga Bay",
+      "status": "SUSPENDED",
+      "objective": "LINK_CLICK",
+      "special_ad_categories": [],
+      "special_ad_category": "NONE"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "XYZ789",
+      "after": "ABC123"
+    },
+    "next": "https://ads-api.twitter.com/16/accounts/123456/campaigns.json?count=100&cursor=ABC123"
+  }
+}

@@ -1,0 +1,48 @@
+﻿@page
+@model Models.Campaign;
+
+<h4>Campaign Details</h4>
+
+@using (Html.BeginForm("SaveDetails", "Campaigns", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.HiddenFor(model => model.Id)
+                <label>Campaign ID:</label>
+                @Html.DisplayFor(model => model.Id)
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Status, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Status, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Objective, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Objective, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Objective, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Special_ad_category, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Special_ad_category, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Special_ad_category, "", new { @class = "text-danger" })
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<div>
+    <a asp-action="Index">Return</a>
+</div>

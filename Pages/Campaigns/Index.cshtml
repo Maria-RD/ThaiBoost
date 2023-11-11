@@ -1,0 +1,38 @@
+﻿@page
+@model ThaiBoost.Pages.Campaigns.CampaignsModel
+
+<div class="text-center">
+    <h4>List of X campaigns - Thailand</h4>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var campaign in Model.CampaignsList)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(model => campaign.Id)
+                </th>
+                <th>
+                    @Html.ActionLink(campaign.Name, "Details", "Campaigns", new { id = campaign.Id}, null)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => campaign.Status)
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
